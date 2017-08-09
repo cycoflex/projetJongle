@@ -1,0 +1,129 @@
+/**  
+    ____  _       ____   ____            _      
+  / ____|| |     / __ \ |  _ \    /\    | |     
+ | |  __ | |    | |  | || |_) |  /  \   | |     
+ | | |_ || |    | |  | ||  _ <  / /\ \  | |     
+ | |__| || |____| |__| || |_) |/ ____ \ | |____ 
+  \_____||______|\____/ |____//_/    \_\|______|  **/
+
+
+/*
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+    1. Dans la construction de vos sections:
+    Toutes les sections doivents avoir un ID en fonction de la page.
+    (exemple:  section-accueil => id="section_accueil_1 si plus il y'a plusieurs sections +1")
+
+    2. Pour la mise en place du flex-blox, il faut se servir d'une div avec l'id container 
+    (exemple :
+        <section>
+            <div id="container" class="contain">
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+            </div>
+        </section>
+    )
+    Cela nous permettra de mieux gerer le responsive, et donner une max-width sur la div au lieu de la section.
+
+    3. Toutes les images devront être dans une figure et ne pas oublier un alt="", ca fait toujours plaisir :) 
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXX La police Mathlete s'utilise pour les titres, boutons et certains liens  ( voir maquette)   */
+@font-face {  /* la mathletebulky est la police version bold */
+    font-family: 'mathletebulky';
+    src: url('../fonts/Mathlete-Bulky-webfont.eot');
+    src: url('../fonts/Mathlete-Bulky-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Mathlete-Bulky-webfont.woff') format('woff'),
+         url('../fonts/Mathlete-Bulky-webfont.ttf') format('truetype'),
+         url('../fonts/Mathlete-Bulky-webfont.svg#mathletebulky') format('svg');
+}
+@font-face { /* la mathletebulky est la police version light */
+    font-family: 'mathleteskinny';
+    src: url(../fonts/'Mathlete-Skinny-webfont.eot');
+    src: url(../fonts/'Mathlete-Skinny-webfont.eot?#iefix') format('embedded-opentype'),
+         url(../fonts/'Mathlete-Skinny-webfont.woff') format('woff'),
+         url(../fonts/'Mathlete-Skinny-webfont.ttf') format('truetype'),
+         url(../fonts/'Mathlete-Skinny-webfont.svg#mathleteskinny') format('svg');
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXX La police open_sanslight s'utilise pour tous les contenus de texte en général ( voir maquette)   */
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/OpenSans-Light-webfont.eot');
+    src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+main {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+button:focus, a:focus, input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+.contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contain-col {
+    display: flex;
+    flex-direction: column;
+}
+img{
+    max-width: 100%;
+}
+
+ /**
+      _    _  ______            _____   ______  _____  
+     | |  | ||  ____|    /\    |  __ \ |  ____||  __ \ 
+     | |__| || |__      /  \   | |  | || |__   | |__) |
+     |  __  ||  __|    / /\ \  | |  | ||  __|  |  _  / 
+     | |  | || |____  / ____ \ | |__| || |____ | | \ \ 
+     |_|  |_||______|/_/    \_\|_____/ |______||_|  \_\ **/
+     
+
+
+ /**
+      __  __            _____  _   _ 
+     |  \/  |    /\    |_   _|| \ | |
+     | \  / |   /  \     | |  |  \| |
+     | |\/| |  / /\ \    | |  | . ` |
+     | |  | | / ____ \  _| |_ | |\  |
+     |_|  |_|/_/    \_\|_____||_| \_| **/
+
+
+
+
+/**
+      ______  ____    ____  _______  ______  _____  
+     |  ____|/ __ \  / __ \|__   __||  ____||  __ \ 
+     | |__  | |  | || |  | |  | |   | |__   | |__) |
+     |  __| | |  | || |  | |  | |   |  __|  |  _  / 
+     | |    | |__| || |__| |  | |   | |____ | | \ \ 
+     |_|     \____/  \____/   |_|   |______||_|  \_\ **/
+     
