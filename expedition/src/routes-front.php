@@ -29,8 +29,8 @@ $app->get('/presentation',"\\route\\Front::presentation")
 ;
 
 // ROUTE POUR LA PAGE DE METHODOLOGIE
-$app->get('/methodologie',"\\route\\Front::methodologie")
-->bind('methodologie')
+$app->get('/pedagogie',"\\route\\Front::pedagogie")
+->bind('pedagogie')
 ;
 
 // ROUTE POUR LA PAGE DE GALERIE
