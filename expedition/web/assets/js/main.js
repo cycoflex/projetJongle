@@ -17,9 +17,20 @@ function cacherElement(ClickButton, element){
 	return ;
 }
 
+function afficherCacherElement(ClickButton, element1,element2){
+	$(ClickButton).click(function(){
+		$(element1).show();
+		$(element2).hide();
+	})
+	return ;
+}
+
 // APPELS FONCTIONS
 
 afficherElement('#btn-menu', '#menu');
 afficherElement('#btn-connexion', '#login');
+afficherCacherElement('#btn-inscription', '#inscription','#login');
 cacherElement('#btn-close', '#menu');
 cacherElement('#btn-close2', '#login');
+cacherElement('#btn-close3', '#inscription');
+
