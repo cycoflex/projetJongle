@@ -29,7 +29,7 @@ class Front extends RouteParent{
 	function accueil(){	
 		//	traitement du formulaire
 
-		return $this->construireHtml(["header_travail", "section-accueil", "footer"]);
+		return $this->construireHtml(["header", "section-accueil", "footer"]);
 	}
 
 	function contact(){		
@@ -37,7 +37,7 @@ class Front extends RouteParent{
 	}
 
 	function presentation(){		
-		return $this->construireHtml(["header_travail", "section-presentation", "footer"]);
+		return $this->construireHtml(["header", "section-presentation", "footer"]);
 	}
 
 	function pedagogie(){		
