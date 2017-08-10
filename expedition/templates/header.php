@@ -11,25 +11,27 @@
 	<div>
 	<!-- début header -->
 		<header>
-			<nav>
-				<a href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/toogle.png"></figure></a>
-				<a href="#">connexion</a>
+			<nav class="contain">
+				<a id="btn-menu" href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/toogle.png"></figure> menu</a>
+				<a id="btn-connexion" href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/picto_connexion.png"></figure> connexion</a>
 			</nav>
-		</header>
-	<!-- début menu -->
+			<!-- début menu -->
 		<div id="menu">
-			<ul>
-				<li><a href="#">accueil</a></li>
-				<li><a href="#">présentation</a></li>
-				<li><a href="#">pédagogie</a></li>
-				<li><a href="#">blog</a></li>
-				<li><a href="#">espace membre</a></li>
-				<li><a href="#">galerie</a></li>
-				<li><a href="#">évènements</a></li>
-				<li><a href="#">contact</a></li>
+			<a id="btn-close" href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/x-crossw.png"></figure> fermer menu</a>
+			<ul class="contain-col">
+				<li><a href="<?php echo $app['url_generator']->generate('accueil')?>">accueil</a></li>
+				<li><a href="<?php echo $app['url_generator']->generate('presentation')?>">présentation</a></li>
+				<li><a href="<?php echo $app['url_generator']->generate('pedagogie')?>">pédagogie</a></li>
+				<li><a href="<?php echo $app['url_generator']->generate('accueil')?>">blog</a></li>
+				<li><a href="<?php echo $app['url_generator']->generate('back-office/espace-membre')?>">espace membre</a></li>
+				<li><a href="<?php echo $app['url_generator']->generate('galerie')?>">galerie</a></li>
+				<li><a href="<?php echo $app['url_generator']->generate('evenements')?>">événements</a></li>
+				<li><a href="<?php echo $app['url_generator']->generate('contact')?>">contact</a></li>
 			</ul>
 		</div>		
 	<!-- début formulaire login -->	
+		</header>
+	
 		<div id="login">
 			<h1>connexion</h1>
 			<form action="" method="GET">
