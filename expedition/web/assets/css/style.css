@@ -106,7 +106,63 @@ img{
      | |  | || |____  / ____ \ | |__| || |____ | | \ \ 
      |_|  |_||______|/_/    \_\|_____/ |______||_|  \_\ **/
      
+#menu {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/header/fond_form.png) no-repeat black;
+    top: 0;
+    left: 0;
+    padding: 2rem 0 0 5%;
+    background-position-y: 3%;
+    background-position-x: 100%;
+    background-size: contain;
+}
+#menu li a {
+    color: white;
+    font-family: mathletebulky;
+    font-size: 5rem;
+}
+#menu ul {
+    border-left: solid white 1px;
+    padding: 0 0 0 2rem;
+    margin-top: 4rem;
+}
+#menu a:nth-child(1){
+    color: white;
+    font-family: mathletebulky;
+}
+#inscription {
+    display: none;
+}
+#login {
+    display: none;
+}
 
+h1, h2, header a{
+    font-family: mathletebulky;
+}
+header{
+    padding: 2rem 5%;
+    position: relative;
+
+}
+header a img {
+    max-width: 90%;
+}
+header a{
+    font-size: 3rem;
+    color: black;
+}
+header a:nth-child(2){
+    position: relative;
+}
+
+figure{
+    margin: 0;
+    display: inline-block;
+}
 
  /**
       __  __            _____  _   _ 
