@@ -62,6 +62,7 @@
                     <option value="femme">Femme</option>
                     <option value="homme">Homme</option>
                 </select> 
+                <div class="g-recaptcha" data-sitekey="6LcdcywUAAAAAHxX-HN4FaW3zsw-L7KwwvcNl-Mh"></div>
 				<button type="submit">valider inscription</button>	
 				<input type="hidden" name="ClassTraitement" value="Inscription">
 			</form>
