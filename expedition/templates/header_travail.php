@@ -6,6 +6,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $urlRoot; ?>/assets/img/header/logo.png" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $urlRoot; ?>/assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo $urlRoot; ?>/assets/css/style.css">
+	<script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
 	<div>
@@ -60,6 +61,7 @@
                     <option value="femme">Femme</option>
                     <option value="homme">Homme</option>
                 </select> 
+                <div class="g-recaptcha" data-sitekey="6Lc1cSwUAAAAAKHiQ0HX9jhvx46VCHFbqZDBFmVS"></div>
 				<button type="submit">valider inscription</button>	
 				<input type="hidden" name="ClassTraitement" value="Inscription">
 			</form>

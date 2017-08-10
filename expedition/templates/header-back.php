@@ -15,7 +15,7 @@
 				<ul>
 					<li><a href="<?php echo $app['url_generator']->generate('accueil')?>">Accueil</a></li>
 					<li><a href="<?php echo $app['url_generator']->generate('blog')?>">Blog</a></li>
-					<li><a href="<?php echo $app['url_generator']->generate('methodologie')?>">Méthodologie</a></li>
+					<li><a href="<?php echo $app['url_generator']->generate('pedagogie')?>">pedagogie</a></li>
 					<li><a href="<?php echo $app['url_generator']->generate('presentation')?>">Présentation</a></li>
 					<li><a href="<?php echo $app['url_generator']->generate('evenements')?>">Evénements</a></li>
 					<li><a href="<?php echo $app['url_generator']->generate('contact')?>">Contact</a></li>					
