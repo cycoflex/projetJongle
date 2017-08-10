@@ -6,6 +6,7 @@
 		<input type="password" name="password" placeholder="Entrez votre mot de passe">
 		
 		<input type="hidden" name="traitementClass" value="Inscription">
+		
 		<button>Ajouter</button>
 	</form>
 	<div id="messageInscription">		

@@ -1,5 +1,5 @@
 <section id="section_contact_1">
-	<div id="container" class="contain">
+	
 		<h2>
 			<figure>
 				<img src="<?php echo $urlRoot;?>/assets/img/header/picto_1.png"></img>
@@ -21,5 +21,5 @@
 		<div id="messageContact">		
 		<?php  $this->afficherVarGlob("Contact"."Message"); ?>
 		</div>
-	</div>
+	
 </section>
