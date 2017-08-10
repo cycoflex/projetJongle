@@ -42,13 +42,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
          url('../fonts/Mathlete-Bulky-webfont.ttf') format('truetype'),
          url('../fonts/Mathlete-Bulky-webfont.svg#mathletebulky') format('svg');
 }
-@font-face { /* la mathletebulky est la police version light */
+@font-face {
     font-family: 'mathleteskinny';
-    src: url(../fonts/'Mathlete-Skinny-webfont.eot');
-    src: url(../fonts/'Mathlete-Skinny-webfont.eot?#iefix') format('embedded-opentype'),
-         url(../fonts/'Mathlete-Skinny-webfont.woff') format('woff'),
-         url(../fonts/'Mathlete-Skinny-webfont.ttf') format('truetype'),
-         url(../fonts/'Mathlete-Skinny-webfont.svg#mathleteskinny') format('svg');
+    src: url('../fonts/Mathlete-Skinny-webfont.eot');
+    src: url('../fonts/Mathlete-Skinny-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Mathlete-Skinny-webfont.woff') format('woff'),
+         url('../fonts/Mathlete-Skinny-webfont.ttf') format('truetype'),
+         url('../fonts/Mathlete-Skinny-webfont.svg#mathleteskinny') format('svg');
 }
 
 /* XXXXXXXXXXXXXXXXXXXXXXXX La police open_sanslight s'utilise pour tous les contenus de texte en général ( voir maquette)   */
@@ -97,6 +97,9 @@ button:focus, a:focus, input:focus, textarea:focus, select:focus {
 img{
     max-width: 100%;
 }
+input, button{
+    font-family: mathleteskinny;
+}
 
  /**
       _    _  ______            _____   ______  _____  
@@ -106,7 +109,7 @@ img{
      | |  | || |____  / ____ \ | |__| || |____ | | \ \ 
      |_|  |_||______|/_/    \_\|_____/ |______||_|  \_\ **/
      
-#menu {
+#menu, #login {
     display: none;
     position: absolute;
     width: 100vw;
@@ -127,17 +130,35 @@ img{
 #menu ul {
     border-left: solid white 1px;
     padding: 0 0 0 2rem;
-    margin-top: 4rem;
+    margin-top: 8rem;
 }
 #menu a:nth-child(1){
     color: white;
-    font-family: mathletebulky;
+    font-family: mathleteskinny;
+    text-transform: uppercase;
 }
 #inscription {
     display: none;
 }
-#login {
-    display: none;
+#login{
+    padding: 8rem 36% 8rem 5%;
+}
+#login div{
+    background: white;
+}
+#login form input, button {
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    display: inline-block;
+    font-size: 2rem;
+    border: 0;
+    border-bottom: 1px darkgrey solid;
+
+}
+#login form {
+    width: 70%;
+    margin: 0 auto;
 }
 
 h1, h2, header a{

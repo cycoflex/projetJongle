@@ -14,12 +14,12 @@
 	<!-- début header -->
 		<header>
 			<nav class="contain">
-				<a id="btn-menu" href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/toogle.png"></figure> menu</a>
-				<a id="btn-connexion" href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/picto_connexion.png"></figure> connexion</a>
+				<a id="btn-menu" href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/toogle.png" alt="bouton menu"></figure> menu</a>
+				<a id="btn-connexion" href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/picto_connexion.png" alt="picto connexion"></figure> connexion</a>
 			</nav>
 			<!-- début menu -->
 		<div id="menu">
-			<a id="btn-close" href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/x-crossw.png"></figure> fermer menu</a>
+			<a id="btn-close" href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/x-crossw.png" alt="fermeture menu"></figure> fermer menu</a>
 			<ul class="contain-col">
 				<li><a href="<?php echo $app['url_generator']->generate('accueil')?>">accueil</a></li>
 				<li><a href="<?php echo $app['url_generator']->generate('presentation')?>">présentation</a></li>
@@ -35,18 +35,21 @@
 		</header>
 	
 		<div id="login">
-			<h1>connexion</h1>
-			<form action="" method="GET">
-				<input type="email" name="email" required placeholder="adresse email">
-				<input type="password" name="password" required placeholder="mot de passe">
-				<div>
-					<a href="#">mot de passe oublié ?</a>
-				</div>
-				<button type="submit">se connecter</button>	
-				<input type="hidden" name="ClassTraitement" value="Login">
-			</form>
-			<p>vous n'avez pas de compte?</p>
-			<a href="#">créer un compte</a>
+			<div>
+				<h1>connexion</h1>
+				<a id="btn-close2" href="#"><figure><img src="<?php echo $urlRoot; ?>/assets/img/header/x-cross.png" alt="fermeture login"></figure></a>
+				<form action="" method="GET">
+					<input type="email" name="email" required placeholder="adresse email">
+					<input type="password" name="password" required placeholder="mot de passe">
+					<div>
+						<a href="#">mot de passe oublié ?</a>
+					</div>
+					<button type="submit">se connecter</button>	
+					<input type="hidden" name="ClassTraitement" value="Login">
+				</form>
+				<p>vous n'avez pas de compte?</p>
+				<a href="#">créer un compte</a>
+			</div>	
 		</div>
 	<!-- début formulaire inscription -->
 		<div id="inscription">
