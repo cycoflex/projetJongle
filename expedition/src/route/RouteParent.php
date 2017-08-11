@@ -40,7 +40,7 @@ class RouteParent{
 		$urlRoot = $this->request->getBasePath();
 		//	--	TECHNIQUE DE BUFFERING
 		//	(Pour éviter l'echo direct, on "dévie" ce que l'on veut afficher 
-		//	 vers une zone temporaire.)
+		//	 vers une zone temporaire.)		
 		ob_start();		
 		foreach ($listePartPage as $part) {
 			require_once("$this->cheminTemplate/$part.php");
