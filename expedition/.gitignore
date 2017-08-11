@@ -1,5 +1,11 @@
 /vendor/
+<<<<<<< HEAD
+
+composer.phar
+composer.lock
+=======
 composer.json
 composer.phar
 composer.lock
 .DS_Store
+>>>>>>> master

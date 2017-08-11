@@ -1,12 +1,12 @@
 <!-- image bannière -->
 <div id="banniere">
-		<img  src="<?php echo $urlRoot ?>/assets/img/presentation/jongle_presentation.jpg" alt="jongleur devant un mur">
+		<img id="img-after" src="<?php echo $urlRoot ?>/assets/img/presentation/jongle_presentation.jpg" alt="jongleur devant un mur">
 </div>
 
 
-<section id="section_presentation_1">
+<section id="section_presentation_1" class="maxWidht">
 		<article>
-			<h1><span>L'expédition...</span> C'est quoi?</h1>
+			<h1 id="before"><span>L'expédition...</span> C'est quoi?</h1>
 			<p>L’expédition est un projet artistique favorisant la recherche et le développement de la jonglerie.
 			Pour cela, elle incite les jongleurs curieux, motivés, et désireux de travailler en groupe à se centrer sur 3 axes : </p>
 
@@ -23,7 +23,7 @@
 		
 		<!-- trombinoscope de l'équipe -->
 		<section>
-				<h1><span>L'expédition...</span> C'est qui?</h1>
+				<h1 id="after"><span>L'expédition...</span> C'est qui?</h1>
 			<!-- plus tard: à récupérer de la data base -->
 			<div class="contain">
 				<article>				    
