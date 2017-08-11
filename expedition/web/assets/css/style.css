@@ -15,7 +15,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     (exemple:  section-accueil => id="section_accueil_1 si plus il y'a plusieurs sections +1")
 
     2. Pour la mise en place du flex-blox, il faut se servir d'une div avec l'id container 
-    (exemple : exemple en bois d'arbre2
+    (exemple : exemple en bois d'arbre encore une fois
         <section>
             <div class="contain">
                 <article></article>
