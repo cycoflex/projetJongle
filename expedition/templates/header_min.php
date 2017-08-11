@@ -15,8 +15,14 @@
 		<header>
 			<nav class="contain">
 				<a id="btn-menu" href="#"> menu</a>
+				<figure>
+					<img src="<?php echo $urlRoot; ?>/assets/img/header/logo_miniature.svg">
+				</figure>
 				<a id="btn-connexion" href="#">connexion</a>
 			</nav>
+			<figure id="fleche_nav">
+					<img src="<?php echo $urlRoot; ?>/assets/img/header/fleche_nav.svg">
+			</figure>
 			<!-- début menu -->
 		<div id="menu">
 			<a id="btn-close" href="#">fermer menu</a>

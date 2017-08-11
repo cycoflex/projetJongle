@@ -117,7 +117,12 @@ form button{
      |  __  ||  __|    / /\ \  | |  | ||  __|  |  _  / 
      | |  | || |____  / ____ \ | |__| || |____ | | \ \ 
      |_|  |_||______|/_/    \_\|_____/ |______||_|  \_\ **/
-     
+header nav figure {
+    width: 12%;
+ } 
+#fleche_nav {
+    width: 100%;
+}    
 #menu, #login, #inscription {
     display: none;
     position: absolute;
