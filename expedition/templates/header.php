@@ -51,7 +51,6 @@
 		</div>
 	<!-- début formulaire inscription -->
 		<div id="inscription">
-			<div>
 				<div>
 					<a id="btn-close3" href="#">a</a>
 					<h1>inscription</h1>
@@ -73,7 +72,6 @@
 						<input type="hidden" name="ClassTraitement" value="Inscription">
 					</form>
 				</div>
-			</div>
 		</div>		
 	</div>
 	<main>
