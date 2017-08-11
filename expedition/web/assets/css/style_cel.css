@@ -1,0 +1,53 @@
+ /**
+      __  __            _____  _   _ 
+     |  \/  |    /\    |_   _|| \ | |
+     | \  / |   /  \     | |  |  \| |
+     | |\/| |  / /\ \    | |  | . ` |
+     | |  | | / ____ \  _| |_ | |\  |
+     |_|  |_|/_/    \_\|_____||_| \_| **/
+
+#banniere {
+	width:80%;
+} 
+#banniere img {
+
+}
+
+#section_presentation_1 h1 {
+	font-size: 7rem;
+	font-weight: normal;
+	text-align: center;
+	}
+
+
+
+#section_presentation_1 span {
+	color: red;
+}
+
+#section_presentation_1 p {
+	font-size: 2rem;
+	color:grey;
+
+}
+
+
+#section_presentation_1  section .contain {
+	flex-wrap: wrap;
+}
+
+#section_presentation_1  section .contain article {
+	width: 23%;
+}
+
+#section_presentation_1 img {
+	border-radius: 50%;
+	border: solid grey 1px;
+}
+
+#section_presentation_1  section .contain article p {
+		text-align: center;
+		font-family: 'mathletebulky';
+		font-size: 6rem;
+		color: black;
+}
