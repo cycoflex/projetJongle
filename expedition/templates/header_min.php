@@ -23,7 +23,7 @@
 			<figure id="fleche_nav">
 					<img src="<?php echo $urlRoot; ?>/assets/img/header/fleche_nav.svg">
 			</figure>
-			<!-- début menu -->
+	<!-- début menu -->
 		<div id="menu">
 			<a id="btn-close" href="#">fermer menu</a>
 			<ul class="contain-col">

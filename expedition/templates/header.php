@@ -31,7 +31,7 @@
 				<li><a href="<?php echo $app['url_generator']->generate('contact')?>">contact</a></li>
 			</ul>
 		</div>
-		<!-- début formulaire login nkjdzkjkjdkzjdkzjdkzdjkzjdkzjdkjzdkz-->	
+		<!-- début formulaire login -->	
 		<div id="login">
 			<div>
 				<span id="btn-close2">a</span>
