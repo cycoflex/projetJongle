@@ -33,7 +33,7 @@ class RouteParent{
 		}
 	}
 
-
+	// Construction de la page à partir d'un template
 	protected function construireHtml($listePartPage){		
 		global $app;			
 		//$request = Request::createFromGlobals();
@@ -48,11 +48,7 @@ class RouteParent{
 		return ob_get_clean();	
 	}
 
-/*
-*******************************************************************************
-**	Affiche une var globale si elle existe
-*******************************************************************************
-*/
+	// Affiche une var globale si elle existe
 	function afficherVarGlob($nomMsg){
 		if (isset($GLOBALS[$nomMsg]))
 			echo $GLOBALS[$nomMsg];
@@ -65,7 +61,8 @@ class RouteParent{
         else
             return "";
     }
-
+    
+    // Affichage de la valeur sur la page
     public function afficherValeur(){
  		if (isset($this->infosDetail[$cle]))
             echo $this->infosDetail[$cle];
