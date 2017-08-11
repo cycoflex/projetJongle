@@ -1,0 +1,5 @@
+/vendor/
+composer.json
+composer.phar
+composer.lock
+.DS_Store

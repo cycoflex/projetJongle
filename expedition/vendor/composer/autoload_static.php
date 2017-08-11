@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc133d7fe7f6defa641adcad721ae959f
+class ComposerStaticInit772723f25bce5244f32d1eb82d82fbdb
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -65,6 +65,13 @@ class ComposerStaticInitc133d7fe7f6defa641adcad721ae959f
         'M' => 
         array (
             'Monolog\\' => 8,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Inflector\\' => 26,
+            'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\Annotations\\' => 28,
+            'Doctrine\\Common\\' => 16,
         ),
     );
 
@@ -221,6 +228,22 @@ class ComposerStaticInitc133d7fe7f6defa641adcad721ae959f
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Doctrine\\Common\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
+        ),
+        'Doctrine\\Common\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
+        ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -236,6 +259,21 @@ class ComposerStaticInitc133d7fe7f6defa641adcad721ae959f
             'Pimple' => 
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
+        ),
+        'D' => 
+        array (
+            'Doctrine\\DBAL\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/dbal/lib',
+            ),
+            'Doctrine\\Common\\Lexer\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
+            ),
+            'Doctrine\\Common\\Collections\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
         ),
     );
@@ -260,11 +298,11 @@ class ComposerStaticInitc133d7fe7f6defa641adcad721ae959f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc133d7fe7f6defa641adcad721ae959f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc133d7fe7f6defa641adcad721ae959f::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc133d7fe7f6defa641adcad721ae959f::$prefixesPsr0;
-            $loader->fallbackDirsPsr0 = ComposerStaticInitc133d7fe7f6defa641adcad721ae959f::$fallbackDirsPsr0;
-            $loader->classMap = ComposerStaticInitc133d7fe7f6defa641adcad721ae959f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit772723f25bce5244f32d1eb82d82fbdb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit772723f25bce5244f32d1eb82d82fbdb::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit772723f25bce5244f32d1eb82d82fbdb::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit772723f25bce5244f32d1eb82d82fbdb::$fallbackDirsPsr0;
+            $loader->classMap = ComposerStaticInit772723f25bce5244f32d1eb82d82fbdb::$classMap;
 
         }, null, ClassLoader::class);
     }

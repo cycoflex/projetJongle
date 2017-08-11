@@ -17,7 +17,10 @@ $app->get('/evenement/{url}', "\\route\\Front::detailEvenement")
 $app->get('/', "\\route\\Front::accueil")
 ->bind('accueil')
 ;
-
+//nom=Claudon&prenom=Nicolas&pseudo=pyrrhus&email=bibi%40earth.com&password=1234&password_confirm=1234&age=37&genre=homme&ClassTraitement=Inscription
+$app->get('/{nom}&{prenom}&{pseudo}&{email}&{password}&{password_confirm}&{age}&{genre}&{ClassTraitement}', "\\route\\Front::inscription")
+->bind('accueil-inscription')
+;
 // ROUTE POUR LA PAGE DE CONTACT
 $app->get('/contact',"\\route\\Front::contact")
 ->bind('contact')
@@ -29,8 +32,8 @@ $app->get('/presentation',"\\route\\Front::presentation")
 ;
 
 // ROUTE POUR LA PAGE DE METHODOLOGIE
-$app->get('/methodologie',"\\route\\Front::methodologie")
-->bind('methodologie')
+$app->get('/pedagogie',"\\route\\Front::pedagogie")
+->bind('pedagogie')
 ;
 
 // ROUTE POUR LA PAGE DE GALERIE
@@ -49,11 +52,13 @@ $app->get('/blog/page/{numPage}', "\\route\\Front::blog")
 ->bind('blog/page')
 ;
 
+
+// Routes vers les 
 $app->get('/articles', "\\route\\Front::blog")
 ->bind('articles')
 ;
 $app->get('/article', "\\route\\Front::blog")
-//->bind('article')
+->bind('article')
 ;
 
 // ROUTE POUR LA PAGE D'UN ARTICLE

@@ -16,9 +16,11 @@ class TraitementInscription extends TraitementCommun{
 		->lireEmail("email");
 		if (!$this->emailExists())
 			$this
-			->lireChamps("login")
-			->lirePassword("password", "passwordHash")	
-			->ajouterNameValeur("dateInscription", date("Y-m-d H:i:s"))		
+			->lireChamps("nom")
+			->lireChamps("prenom")
+			->lireChamps("pseudo")			
+			->lirePassword("password", "password_crypt")				
+			->ajouterNameValeur("date_inscription", date("Y-m-d H:i:s"))		
 			->ajouterNameValeur("level", 1)		
 			->envoyer("user", "email")
 			->setMessage("Inscription réussie. Bienvenue !");
