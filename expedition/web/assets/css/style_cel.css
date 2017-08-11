@@ -1,0 +1,91 @@
+ /**
+      __  __            _____  _   _ 
+     |  \/  |    /\    |_   _|| \ | |
+     | \  / |   /  \     | |  |  \| |
+     | |\/| |  / /\ \    | |  | . ` |
+     | |  | | / ____ \  _| |_ | |\  |
+     |_|  |_|/_/    \_\|_____||_| \_| **/
+
+#banniere {	
+	position: relative;
+} 
+
+#banniere #img-after {
+
+}
+
+#banniere:after {
+	content: url("../img/ombre.png");
+	position: absolute;
+	z-index: 1;
+    top: 99%;
+    left: 7%;
+}
+
+#section_presentation_1 h1 {
+	font-size: 12rem;
+	font-weight: normal;
+	text-align: center;
+	font-family: mathleteskinny;
+	position: relative;
+	}
+
+#section_presentation_1 #before:before {
+	content:url("../img/quote_gauche.png");
+	position:absolute;
+	left: 0%;
+    top: 7%;
+}
+
+
+
+#section_presentation_1 span {
+	color: red;
+}
+
+#section_presentation_1 p {
+	font-size: 2rem;
+	color:grey;
+
+}
+
+#section_presentation_1 #after:after {
+	content:url("../img/quote_droit.png");
+	position:absolute;
+	left: 91%;
+    top: -62%;
+}
+
+#section_presentation_1  section .contain {
+	flex-wrap: wrap;
+}
+
+#section_presentation_1  section .contain article {
+	width: 23%;
+}
+
+#section_presentation_1 img {
+	border-radius: 50%;
+	border: solid grey 1px;
+}
+
+#section_presentation_1  section .contain article p {
+		text-align: center;
+		font-family: mathleteskinny;
+		font-size: 6rem;
+		color: black;
+}
+
+/*css massonry*/
+/*.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }*/
+
+.grid-item {
+  float: left;
+  width: 80px;
+  height: 60px;
+  border: 2px solid hsla(0, 0%, 0%, 0.5);
+}
+
+.grid-item--width2 { width: 160px; }
+.grid-item--height2 { height: 140px; }
