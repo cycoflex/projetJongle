@@ -6,6 +6,12 @@
      | |  | | / ____ \  _| |_ | |\  |
      |_|  |_|/_/    \_\|_____||_| \_| **/
 
+#banniere {
+	width:80%;
+} 
+#banniere img {
+
+}
 
 #section_presentation_1 h1 {
 	font-size: 7rem;
