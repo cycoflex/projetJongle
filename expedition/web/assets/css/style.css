@@ -17,7 +17,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     2. Pour la mise en place du flex-blox, il faut se servir d'une div avec l'id container 
     (exemple :
         <section>
-            <div id="container" class="contain">
+            <div class="contain">
                 <article></article>
                 <article></article>
                 <article></article>
@@ -74,7 +74,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-main {
+main #maxWidht {
     max-width: 130rem;
     margin: 0 auto;
 }
@@ -188,23 +188,23 @@ form button{
 }
 #login div, #inscription div{
     background: white;
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
     position: relative;
 }
-#login div::after, #inscription > div::after{
+#login > div::after, #inscription > div::after{
     content: url(../img/ombre_right.png);
     top: -10px;
     right:  0;
     position: absolute;
     z-index: 3;
 }
-#login div::before, #inscription > div::before{
+#login > div::before, #inscription > div::before{
     content: url(../img/ombre_left.png);
     top: -10px;
     left: 0;
     position: absolute;
     z-index: 3;
- }   
+ } 
 #login form input, form button, form a:nth-child(7),
 #inscription form input, #inscription form button, #inscription form select {
     width: 100%;
@@ -221,6 +221,9 @@ form button{
     background: white;
     font-family: mathletebulky;
     color: lightgrey;
+}
+#inscription .g-recaptcha {
+    padding: 2rem 0;
 }
 #login form button, #inscription form button{
     border: 1px #1DCCDB solid;
@@ -327,7 +330,6 @@ header a img {
     position: absolute;
     z-index: 1;
     width: 30%;
-
 }
 header a{
     font-size: 3rem;
