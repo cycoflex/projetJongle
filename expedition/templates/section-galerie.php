@@ -10,5 +10,5 @@
   <div class="grid-item"><img src="<?php echo $urlRoot ?>/assets/img/massonry/image6.jpg"></div>  
 </div>
 
-
+<!-- commentaire à ma con -->
 </section>
