@@ -59,9 +59,14 @@ class Front extends RouteParent{
 		return $this->construireHtml(["header", "section-article", "footer"]);
 	}
 
-	//
-	//	Photos publiques
-	//
+
+/*
+*******************************************************************************
+*******************************************************************************
+**	Galerie - Photos et vidéos publiques
+*******************************************************************************
+*******************************************************************************
+*/
 	function galerie(){		
 		return $this->construireHtml(["header", "section-galerie", "footer"]);
 	}
