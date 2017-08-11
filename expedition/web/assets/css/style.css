@@ -74,7 +74,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-main #maxWidht {
+main .maxWidht {
     max-width: 130rem;
     margin: 0 auto;
 }
