@@ -1,5 +1,7 @@
 <?php 
 namespace route;
+use \traitement\TraitementInscription;
+use \traitement\TraitementConnexion;
 
 class Front extends RouteParent{
 /*
@@ -78,21 +80,74 @@ class Front extends RouteParent{
 *******************************************************************************
 *******************************************************************************
 */
-	function inscription(){		
-		return $this->construireHtml(["header", "section-inscription", "footer"]);
+	function inscription(){	
+		// Section vérification infos  - SECURITE
+		//	...
+		//
+		//	CETTE SUITE DOIT POUVOIR SE REDUIRE
+		$this->request->query->get('nom');
+		$this->request->query->get('prenom');
+		$this->request->query->get('pseudo');
+		$this->request->query->get('email');
+		$this->request->query->get('password');
+		$this->request->query->get('password_confirm');
+		$this->request->query->get('age');
+		$this->request->query->get('genre');											
+		$inscription = new TraitementInscription($this->request);
+		if (!$inscription->isConnected){
+			
+			// A MODIFIER
+			// $this->connexion
+			// $inscription->isConnected = true;
+			// $inscription->isInscrit = true;
+			// $inscription->urlRedirection = "profil/pseudo";
+
+			// RENVOI VERS LES PAGES IDOINES
+			// global $app;
+			// $app->redirect($this->urlRedirection);
+		
+			return "Vous êtes bien inscrit";
+		}
+		else {
+
+		// MESSAGE D'ERREUR ET LIEN VERS L'ACCUEIL
+
+		return 'Déjà inscrit !';
+
+		}
+		
 	}
 
 /*
 *******************************************************************************
+*******************************************************************************
 **	Connexion d'un utilisateur
+*******************************************************************************
 *******************************************************************************
 */
 	function connexion(){
-		if ($this->urlRedirection == "")
-			return $this->construireHtml(["header", "section-connexion", "footer"]);	
-		else{
-			global $app;
-            return $app->redirect($this->urlRedirection);
+		$this->request->query->get('email');
+		$this->request->query->get('password');
+		$connexion = new TraitementConnexion($this->request);
+		if (!$connexion->isConnected){
+			
+			// A MODIFIER
+			// $this->connexion
+			// $inscription->isConnected = true;
+			// $inscription->isInscrit = true;
+			// $inscription->urlRedirection = "";	// page actuelle
+
+			// RENVOI VERS LES PAGES IDOINES
+			// global $app;
+			// $app->redirect($this->urlRedirection);
+		
+			return "Vous êtes bien inscrit";
+			return 'Connexion réussie';
+		}
+		else{ 
+			// MESSAGE D'ERREUR ET LIEN VERS L'ACCUEIL
+
+			return 'erreur de connexion';
 		}
 	}
 

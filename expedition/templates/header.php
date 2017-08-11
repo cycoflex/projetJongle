@@ -38,12 +38,13 @@
 			<div>
 				<a id="btn-close2" href="#">a</a>
 				<h1>connexion</h1>
-				<form action="" method="GET">
+				<form action="connexion" method="GET">
+					<!--<input type="hidden" name="ClassTraitement" value="connexion">-->
 					<input type="email" name="email" required placeholder="adresse email">
 					<input type="password" name="password" required placeholder="mot de passe">
 					<a href="#">mot de passe oublié ?</a>
 					<button type="submit">se connecter</button>	
-					<input type="hidden" name="ClassTraitement" value="Login">
+					
 					<p>vous n'avez pas de compte?</p>
 					<a id="btn-inscription" href="#">créer un compte</a>
 				</form>
@@ -55,7 +56,7 @@
 				<div>
 					<a id="btn-close3" href="#">a</a>
 					<h1>inscription</h1>
-					<form action="" method="GET">
+					<form action="inscription" method="GET">
 						<input type="text" name="nom" required placeholder="nom">
 						<input type="text" name="prenom" required placeholder="prenom">
 						<input type="text" name="pseudo" required placeholder="pseudo">
@@ -70,7 +71,7 @@
 		                </select> 
 		                <div class="g-recaptcha" data-sitekey="6LcdcywUAAAAAHxX-HN4FaW3zsw-L7KwwvcNl-Mh"></div>
 						<button type="submit">valider inscription</button>	
-						<input type="hidden" name="ClassTraitement" value="Inscription">
+						<!--<input type="hidden" name="ClassTraitement" value="Inscription">-->
 					</form>
 				</div>
 			</div>

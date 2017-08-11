@@ -55,15 +55,15 @@ class RouteParent{
 	}
 
 	// POUR RECUPERER LA VALEUR DANS UNE VARIABLE
-    public function lireValeur($cle){    	
+    function lireValeur($cle){    	
         if (isset($this->infosDetail[$cle]))
             return $this->infosDetail[$cle];
         else
             return "";
     }
-    
+
     // Affichage de la valeur sur la page
-    public function afficherValeur(){
+    function afficherValeur(){
  		if (isset($this->infosDetail[$cle]))
             echo $this->infosDetail[$cle];
     }

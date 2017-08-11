@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 08 août 2017 à 06:53
+-- Généré le :  ven. 11 août 2017 à 08:58
 -- Version du serveur :  10.1.25-MariaDB
 -- Version de PHP :  7.1.7
 
@@ -71,10 +71,20 @@ CREATE TABLE `commentaire` (
 
 CREATE TABLE `contact` (
   `id` int(11) NOT NULL,
-  `pseudo` varchar(512) NOT NULL,
+  `nom` varchar(512) NOT NULL,
+  `prenom` varchar(512) NOT NULL,
   `email` varchar(512) NOT NULL,
-  `message` text NOT NULL
+  `message` text NOT NULL,
+  `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `contact`
+--
+
+INSERT INTO `contact` (`id`, `nom`, `prenom`, `email`, `message`, `date`) VALUES
+(0, 'nom', '', '0735@mail.me', 'message 0735', '2017-08-11 07:36:10'),
+(1, 'bob', '', 'bob@earth.com', 'blabla', '2017-08-11 05:06:55');
 
 -- --------------------------------------------------------
 
@@ -132,17 +142,6 @@ CREATE TABLE `mediaarticle` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `niveau`
---
-
-CREATE TABLE `niveau` (
-  `id` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `page`
 --
 
@@ -168,13 +167,21 @@ CREATE TABLE `user` (
   `prenom` varchar(512) NOT NULL,
   `resume` text NOT NULL,
   `email` varchar(512) NOT NULL,
-  `email_secours` varchar(512) NOT NULL,
   `date_naissance` datetime NOT NULL,
   `date_inscription` datetime NOT NULL,
   `date_modification` datetime NOT NULL,
-  `id_niveau` int(11) NOT NULL,
+  `level` int(11) NOT NULL,
+  `niveau` int(11) NOT NULL,
   `password_crypt` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `pseudo`, `nom`, `prenom`, `resume`, `email`, `date_naissance`, `date_inscription`, `date_modification`, `level`, `niveau`, `password_crypt`) VALUES
+(0, '0521', '', '', '', '0521@mail.me', '0000-00-00 00:00:00', '2017-08-11 05:58:32', '0000-00-00 00:00:00', 1, 0, '$2y$10$GlAKMNqjnkZhKSC7E8v4qu8BdhxGnIW4OMfCixQ.AY1gigMuGtEoS'),
+(0, '', '', '', '', '', '0000-00-00 00:00:00', '2017-08-11 05:59:01', '0000-00-00 00:00:00', 1, 0, '$2y$10$GEsM0Dpmogj5sASxC5hiJuSjhyc.oquZGDu8.HtZw.mFFQvXKX.4W');
 
 --
 -- Index pour les tables déchargées
@@ -236,128 +243,6 @@ ALTER TABLE `mediaarticle`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_article` (`id_article`),
   ADD KEY `id_media` (`id_media`);
-
---
--- Index pour la table `niveau`
---
-ALTER TABLE `niveau`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `page`
---
-ALTER TABLE `page`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `idUser` (`idUser`);
-
---
--- Index pour la table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_niveau` (`id_niveau`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `article`
---
-ALTER TABLE `article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `categorie`
---
-ALTER TABLE `categorie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `commentaire`
---
-ALTER TABLE `commentaire`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `contact`
---
-ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `evenement`
---
-ALTER TABLE `evenement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `evenementmedia`
---
-ALTER TABLE `evenementmedia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `media`
---
-ALTER TABLE `media`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `mediaarticle`
---
-ALTER TABLE `mediaarticle`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `niveau`
---
-ALTER TABLE `niveau`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `page`
---
-ALTER TABLE `page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- Contraintes pour les tables déchargées
---
-
---
--- Contraintes pour la table `article`
---
-ALTER TABLE `article`
-  ADD CONSTRAINT `article_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Contraintes pour la table `categorie`
---
-ALTER TABLE `categorie`
-  ADD CONSTRAINT `categorie_ibfk_1` FOREIGN KEY (`id`) REFERENCES `article` (`id_categorie`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Contraintes pour la table `commentaire`
---
-ALTER TABLE `commentaire`
-  ADD CONSTRAINT `commentaire_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `commentaire_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Contraintes pour la table `evenementmedia`
---
-ALTER TABLE `evenementmedia`
-  ADD CONSTRAINT `evenementmedia_ibfk_1` FOREIGN KEY (`id_evenement`) REFERENCES `evenement` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `evenementmedia_ibfk_2` FOREIGN KEY (`id_media`) REFERENCES `media` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Contraintes pour la table `mediaarticle`
---
-ALTER TABLE `mediaarticle`
-  ADD CONSTRAINT `mediaarticle_ibfk_1` FOREIGN KEY (`id_media`) REFERENCES `media` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `mediaarticle_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Contraintes pour la table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`id_niveau`) REFERENCES `niveau` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

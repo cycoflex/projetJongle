@@ -17,10 +17,10 @@ $app->get('/evenement/{url}', "\\route\\Front::detailEvenement")
 $app->get('/', "\\route\\Front::accueil")
 ->bind('accueil')
 ;
-//nom=Claudon&prenom=Nicolas&pseudo=pyrrhus&email=bibi%40earth.com&password=1234&password_confirm=1234&age=37&genre=homme&ClassTraitement=Inscription
-// $app->get('/{nom}&{prenom}&{pseudo}&{email}&{password}&{password_confirm}&{age}&{genre}&{ClassTraitement}', "\\route\\Front::inscription")
-// ->bind('accueil-inscription')
-// ;
+//	Inscription 
+$app->get('/{nom}/{prenom}/{pseudo}/{email}/{password}/{password_confirm}/{age}/{genre}/{ClassTraitement}', "\\route\\Front::inscription")
+->bind('accueil-inscription')
+;
 // ROUTE POUR LA PAGE DE CONTACT
 $app->get('/contact',"\\route\\Front::contact")
 ->bind('contact')
@@ -68,11 +68,11 @@ $app->get('/article/{id}', "\\route\\Front::article")
 
 // ROUTE POUR LA PAGE D'INSCRIPTION D'UN UTILISATEUR
 // (MATCH --> POUR UTILISER POST ET GET)
-$app->match('/inscription', "\\route\\Front::inscription")
+$app->get('/inscription', "\\route\\Front::inscription")
 ->bind('inscription')
 ;
 
 // ROUTE POUR LA PAGE DE CONNEXION D'UN UTILISATEUR
-$app->match('/connexion', "\\route\\Front::connexion")
+$app->get('/connexion', "\\route\\Front::connexion")
 ->bind('connexion')
 ;

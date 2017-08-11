@@ -3,16 +3,16 @@
 	
 		<article>
 			<h2>Nos photos</h2>
-			<div>
+			<section id="section_galerie_2">
 				... Masonry tof ...
-			</div>
+			</section>
 		</article>
 
 		<article>
 			<h2>Nos vidéos</h2>
-			<div>
+			<section id="section_galerie_3">
 				... vids façon Youtube ...
-			</div>
+			</section>
 		</article>
 	
 </section>
