@@ -10,16 +10,16 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $urlRoot; ?>/assets/css/style.css">
 </head>
 <body>
-	<div>
+	<div id="accueil">
 	<!-- début header -->
 		<header>
 			<nav class="contain">
-				<a id="btn-menu" href="#"> menu</a>
-				<a id="btn-connexion" href="#">connexion</a>
+				<span id="btn-menu"> menu</span>
+				<span id="btn-connexion" >connexion</span>
 			</nav>
 			<!-- début menu -->
 		<div id="menu">
-			<a id="btn-close" href="#">fermer menu</a>
+			<span id="btn-close">fermer menu</span>
 			<ul class="contain-col">
 				<li><a href="<?php echo $app['url_generator']->generate('accueil')?>">accueil</a></li>
 				<li><a href="<?php echo $app['url_generator']->generate('presentation')?>">présentation</a></li>
@@ -30,13 +30,11 @@
 				<li><a href="<?php echo $app['url_generator']->generate('evenements')?>">événements</a></li>
 				<li><a href="<?php echo $app['url_generator']->generate('contact')?>">contact</a></li>
 			</ul>
-		</div>		
-	<!-- début formulaire login -->	
-		</header>
-	
+		</div>
+		<!-- début formulaire login -->	
 		<div id="login">
 			<div>
-				<a id="btn-close2" href="#">a</a>
+				<span id="btn-close2">a</span>
 				<h1>connexion</h1>
 				<form action="" method="GET">
 					<input type="email" name="email" required placeholder="adresse email">
@@ -45,7 +43,7 @@
 					<button type="submit">se connecter</button>	
 					<input type="hidden" name="ClassTraitement" value="Login">
 					<p>vous n'avez pas de compte?</p>
-					<a id="btn-inscription" href="#">créer un compte</a>
+					<span id="btn-inscription">créer un compte</span>
 					<div id="messageLogin">		
 						<?php  $this->afficherVarGlob("Login"."Message"); ?>
 					</div>
@@ -55,7 +53,7 @@
 	<!-- début formulaire inscription -->
 		<div id="inscription">
 				<div>
-					<a id="btn-close3" href="#">a</a>
+					<span id="btn-close3">a</span>
 					<h1>inscription</h1>
 					<form action="" method="GET">
 						<input type="text" name="pseudo" required placeholder="pseudo">
@@ -70,6 +68,12 @@
 						</div>
 					</form>
 				</div>
-		</div>		
+		</div>				
+		</header>
+		<figure id="logo-accueil">
+			<img src="<?php echo $urlRoot; ?>/assets/img/accueil/logo-accueil.svg">
+		</figure>
+		<h1>l'expédition</h1>
+	
 	</div>
 	<main>
