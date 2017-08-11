@@ -46,6 +46,9 @@
 					<input type="hidden" name="ClassTraitement" value="Login">
 					<p>vous n'avez pas de compte?</p>
 					<a id="btn-inscription" href="#">créer un compte</a>
+					<div id="messageLogin">		
+						<?php  $this->afficherVarGlob("Login"."Message"); ?>
+					</div>
 				</form>
 			</div>	
 		</div>
@@ -55,21 +58,16 @@
 					<a id="btn-close3" href="#">a</a>
 					<h1>inscription</h1>
 					<form action="" method="GET">
-						<input type="text" name="nom" required placeholder="nom">
-						<input type="text" name="prenom" required placeholder="prenom">
 						<input type="text" name="pseudo" required placeholder="pseudo">
 						<input type="email" name="email" required placeholder="adresse email">
 						<input type="password" name="password" required placeholder="mot de passe">
 						<input type="password" name="password_confirm" required placeholder="confirmation mot de passe">
-						<input type="text" name="age" required placeholder="âge">
-						<select name="genre">
-		                    <option value="">genre</option>    
-		                    <option value="femme">Femme</option>
-		                    <option value="homme">Homme</option>
-		                </select> 
 		                <div class="g-recaptcha" data-sitekey="6LcdcywUAAAAAHxX-HN4FaW3zsw-L7KwwvcNl-Mh"></div>
 						<button type="submit">valider inscription</button>	
 						<input type="hidden" name="ClassTraitement" value="Inscription">
+						<div id="messageInscription">		
+							<?php  $this->afficherVarGlob("Inscription"."Message"); ?>
+						</div>
 					</form>
 				</div>
 		</div>		
