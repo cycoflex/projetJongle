@@ -1,19 +1,9 @@
-<section>
-	<h2>Mon accueil</h2>	
-	<p>
-		Le contenu de mon accueil
-	</p>
-	<h4>Abonnez-vous à notre newsletter</h4>
-	<form method="get">
-		<input type="email" name="email" placeholder="Votre email" required>
-		<input type="hidden" name="traitementClass" value="Newsletter">
-		<button type="submit">Envoyer</button>
-	</form>
-	<div class="feedback">
-		<?php  
-		//Affichage du message de retour 
-		$this->afficherVarGlob("Newsletter"."Message"); 
-		?>
+<section id="section_accueil_1">
+	<div id="accueil">
+		<figure id="logo-accueil">
+			<img src="<?php echo $urlRoot; ?>/assets/img/accueil/logo-accueil.svg">
+		</figure>
+		<h1>l'expédition</h1>
 	</div>
 </section>
 

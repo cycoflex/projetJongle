@@ -10,15 +10,22 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $urlRoot; ?>/assets/css/style.css">
 </head>
 <body>
-<!-- début header -->
-	<header>
-		<nav class="contain">
-			<span id="btn-menu"> menu</span>
-			<span id="btn-connexion" >connexion</span>
-		</nav>
-<!-- début menu -->
+	<div>
+	<!-- début header -->
+		<header>
+			<nav class="contain">
+				<a id="btn-menu" href="#"> menu</a>
+				<figure>
+					<img src="<?php echo $urlRoot; ?>/assets/img/header/logo_miniature.svg">
+				</figure>
+				<a id="btn-connexion" href="#">connexion</a>
+			</nav>
+			<figure id="fleche_nav">
+					<img src="<?php echo $urlRoot; ?>/assets/img/header/fleche_nav.svg">
+			</figure>
+	<!-- début menu -->
 		<div id="menu">
-			<span id="btn-close">fermer menu</span>
+			<a id="btn-close" href="#">fermer menu</a>
 			<ul class="contain-col">
 				<li><a href="<?php echo $app['url_generator']->generate('accueil')?>">accueil</a></li>
 				<li><a href="<?php echo $app['url_generator']->generate('presentation')?>">présentation</a></li>
@@ -29,11 +36,13 @@
 				<li><a href="<?php echo $app['url_generator']->generate('evenements')?>">événements</a></li>
 				<li><a href="<?php echo $app['url_generator']->generate('contact')?>">contact</a></li>
 			</ul>
-		</div>
-		<!-- début formulaire login -->	
+		</div>		
+	<!-- début formulaire login -->	
+		</header>
+	
 		<div id="login">
 			<div>
-				<span id="btn-close2">a</span>
+				<a id="btn-close2" href="#">a</a>
 				<h1>connexion</h1>
 				<form action="" method="GET">
 					<input type="email" name="email" required placeholder="adresse email">
@@ -42,7 +51,7 @@
 					<button type="submit">se connecter</button>	
 					<input type="hidden" name="ClassTraitement" value="Login">
 					<p>vous n'avez pas de compte?</p>
-					<span id="btn-inscription">créer un compte</span>
+					<a id="btn-inscription" href="#">créer un compte</a>
 					<div id="messageLogin">		
 						<?php  $this->afficherVarGlob("Login"."Message"); ?>
 					</div>
@@ -52,7 +61,7 @@
 	<!-- début formulaire inscription -->
 		<div id="inscription">
 				<div>
-					<span id="btn-close3">a</span>
+					<a id="btn-close3" href="#">a</a>
 					<h1>inscription</h1>
 					<form action="" method="GET">
 						<input type="text" name="pseudo" required placeholder="pseudo">
@@ -67,12 +76,6 @@
 						</div>
 					</form>
 				</div>
-		</div>				
-		</header>
-	
-	
-		
-		
-	
+		</div>		
 	</div>
 	<main>

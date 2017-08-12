@@ -15,9 +15,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     (exemple:  section-accueil => id="section_accueil_1 si plus il y'a plusieurs sections +1")
 
     2. Pour la mise en place du flex-blox, il faut se servir d'une div avec l'id container 
-    (exemple :
+    (exemple : test de 10h36
         <section>
-            <div id="container" class="contain">
+            <div class="contain">
                 <article></article>
                 <article></article>
                 <article></article>
@@ -74,7 +74,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-main {
+main .maxWidht {
     max-width: 130rem;
     margin: 0 auto;
 }
@@ -109,6 +109,13 @@ form input{
 form button{
     font-family: mathletebulky;
 }
+#btn-login, #btn-inscription, #btn-menu, #btn-connexion, #btn-close,
+#btn-close2, #btn-close3, button {
+    cursor: pointer;
+}
+p{
+    font-family: GeosansLight;
+}
 
  /**
       _    _  ______            _____   ______  _____  
@@ -117,10 +124,22 @@ form button{
      |  __  ||  __|    / /\ \  | |  | ||  __|  |  _  / 
      | |  | || |____  / ____ \ | |__| || |____ | | \ \ 
      |_|  |_||______|/_/    \_\|_____/ |______||_|  \_\ **/
-     
+
+header {
+    padding: 2rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+header nav figure {
+    width: 12%;
+ } 
+#fleche_nav {
+    width: 100%;
+}    
 #menu, #login, #inscription {
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background: url(../img/header/fond_form.png) no-repeat black;
@@ -162,7 +181,7 @@ form button{
         left: 5.9rem;
      }
 }        
-#menu > a{
+#menu > span{
     color: white;
     font-family: mathleteskinny;
     font-weight: normal;
@@ -188,25 +207,25 @@ form button{
 }
 #login div, #inscription div{
     background: white;
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
     position: relative;
 }
-#login div::after{
+#login > div::after, #inscription > div::after{
     content: url(../img/ombre_right.png);
     top: -10px;
     right:  0;
     position: absolute;
     z-index: 3;
 }
-#login div::before{
+#login > div::before, #inscription > div::before{
     content: url(../img/ombre_left.png);
     top: -10px;
     left: 0;
     position: absolute;
     z-index: 3;
- }   
+ } 
 #login form input, form button, form a:nth-child(7),
-#inscription form input, #inscription form button, #inscription form select {
+#inscription form input, #inscription form button, #inscription form select, #btn-inscription {
     width: 100%;
     padding: .5rem 0;
     margin: 1rem 0;
@@ -222,6 +241,9 @@ form button{
     font-family: mathletebulky;
     color: lightgrey;
 }
+#inscription .g-recaptcha {
+    padding: 2rem 0;
+}
 #login form button, #inscription form button{
     border: 1px #1DCCDB solid;
     border-radius: 10px;
@@ -234,7 +256,7 @@ form button{
     background: white;
     color: #1DCCDB;
 }
-#login form a:nth-child(7){
+#login form span:nth-child(7){
     border: 1px #1DCCDB solid;
     border-radius: 10px;
     background: #white;
@@ -291,14 +313,12 @@ form button{
     color: #1DCCDB;
     float: right;
 }
-
-h1, h2, header a{
-    font-family: mathletebulky;
+#inscription {
+    overflow: auto;
 }
-header{
-    padding: 2rem 5%;
-    position: relative;
 
+h1, h2, header a, header span{
+    font-family: mathletebulky;
 }
 header a img {
     max-width: 90%;
@@ -311,7 +331,6 @@ header a img {
 }
 #btn-menu::before{
     content: url(../img/header/toogle.svg);
-    top: -1px;
     right: 49.5%;
     position: absolute;
     z-index: 1;
@@ -324,9 +343,8 @@ header a img {
     position: absolute;
     z-index: 1;
     width: 30%;
-
 }
-header a{
+header a, header span{
     font-size: 3rem;
     color: black;
 }
@@ -346,7 +364,349 @@ figure{
      | |  | | / ____ \  _| |_ | |\  |
      |_|  |_|/_/    \_\|_____||_| \_| **/
 
+/* XXXXXXXXXXXXXXXXXXX SECTIION ACCUEIL 1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+#logo-accueil{
+    width: 60%;
+    margin: 0 auto 0 auto!important;
+    display: block;
+    position: relative;
+    padding: 20rem 0 0 0;
+}
+#accueil > h1 {
+    font-size: 10rem;
+    font-family: mathleteskinny;
+    font-weight: 100;
+    display: block;
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+#accueil{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
 
+#logo-accueil::after{
+    content: url(../img/header/texte_cote.svg);
+    bottom: -120px;
+    right: -191px;
+    position: absolute;
+    z-index: 1;
+    width: 3%;
+}
+/* XXXXXXXXXXXXXXXXXXX SECTIION ACCUEIL 2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#section_accueil_2 > div {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#section_accueil_2 > div::after{
+    content: url(../img/header/arrow.svg);
+    bottom: 0;
+    right: 5%;
+    position: absolute;
+    z-index: 2;
+    width: 2%;
+}
+#section_accueil_2 figure {
+    top: 11rem;
+    position: absolute;
+    left: 23%;
+    width: 50%;
+    z-index: 5;
+}
+#section_accueil_2 figure::before{
+    content: url(../img/accueil/picto_1.svg);
+    top: -1rem;
+    left: 14%;
+    position: absolute;
+    z-index: 3;
+    width: 10%;
+}
+#section_accueil_2 figure::after{
+    content: url(../img/accueil/picto_6.svg);
+    bottom: -1rem;
+    right: -26%;
+    position: absolute;
+    z-index: 3;
+    width: 10%;
+}
+#section_accueil_2 > div div {
+    background: #FF4A4A;
+    position: absolute;
+    z-index: 2;
+    padding: 14rem 24.15%;
+    top: 26rem;
+}
+#section_accueil_2 > div div::before {
+    content: url(../img/accueil/picto_12.svg);
+    top: -9rem;
+    left: 19%;
+    position: absolute;
+    z-index: 3;
+    width: 10%;
+}
+#section_accueil_2 > div div::after {
+    content: url(../img/accueil/picto_0.svg);
+    bottom: -8rem;
+    left: 19%;
+    position: absolute;
+    z-index: 3;
+    width: 10%;
+}
+#section_accueil_2 article {
+    position: absolute;
+    top: 46rem;
+    z-index: 3;
+    left: 20%;
+    border-left: solid 20px black;
+    padding-left: 2%;
+    width: 60%;
+}
+#section_accueil_2 article::before{
+    content: url(../img/quote_2.svg);
+    bottom: 0;
+    right: -9%;
+    position: absolute;
+    z-index: 3;
+    width: 5%;
+}
+#section_accueil_2 article::after{
+    content: url(../img/quote_1.svg);
+    top: 0;
+    left: -9%;
+    position: absolute;
+    z-index: 3;
+    width: 5%;
+}
+#section_accueil_2 h2 {
+    font-size: 5rem;
+    color: white;
+    font-weight: normal;
+    margin: 0;
+}
+#section_accueil_2 p {
+    font-size: 1.8rem;
+    text-align: justify;
+    margin: 0;
+}
+#section_accueil_2 span {
+    position: absolute;
+}
+#section_accueil_2 span:nth-child(2) {
+    top: 27rem;
+    left: 6%;
+    font-family: mathleteskinny;
+    font-size: 4rem;
+    color: white;
+    z-index: 3;
+    position: absolute;
+}
+/* XXXXXXXXXXXXXXXXXXX SECTIION ACCUEIL 3 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#section_accueil_3 > div {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#section_accueil_3 > div::after{
+    content: url(../img/header/arrow.svg);
+    bottom: 0;
+    right: 5%;
+    position: absolute;
+    z-index: 2;
+    width: 2%;
+}
+#section_accueil_3 figure {
+    top: 7rem;
+    position: absolute;
+    left: 3%;
+    width: 30%;
+    z-index: 5;
+}
+#section_accueil_3 figure::before{
+    content: url(../img/accueil/picto_5.svg);
+    top: -3rem;
+    left: 41%;
+    position: absolute;
+    z-index: 3;
+    width: 25%;
+}
+#section_accueil_3 figure::after{
+    content: url(../img/accueil/picto_6.svg);
+    bottom: 1rem;
+    left: 34%;
+    position: absolute;
+    z-index: 3;
+    width: 18%;
+}
+#section_accueil_3 > div div {
+    background: #A9E3C2;
+    position: absolute;
+    z-index: 2;
+    padding: 13rem 39.15%;
+    top: 17.5rem;
+    right: 0;
+}
+#section_accueil_3 > div div::before {
+    content: url(../img/accueil/picto_13.svg);
+    top: -5rem;
+    right: 28%;
+    position: absolute;
+    z-index: 3;
+    width: 7%;
+}
+#section_accueil_3 > div div::after {
+    content: url(../img/accueil/picto_8.svg);
+    bottom: -16rem;
+    right: 44%;
+    position: absolute;
+    z-index: 3;
+    width: 5%;
+}
+#section_accueil_3 article {
+    position: absolute;
+    top: 30rem;
+    z-index: 3;
+    left: 38%;
+    border-left: solid 20px black;
+    padding-left: 2%;
+    width: 45%;
+}
+#section_accueil_3 article::before{
+    content: url(../img/quote_2.svg);
+    bottom: 0;
+    right: -11%;
+    position: absolute;
+    z-index: 3;
+    width: 6%;
+}
+#section_accueil_3 article::after{
+    content: url(../img/quote_1.svg);
+    top: 0;
+    left: -11%;
+    position: absolute;
+    z-index: 3;
+    width: 6%;
+}
+#section_accueil_3 h2 {
+    font-size: 5rem;
+    color: white;
+    font-weight: normal;
+    margin: 0;
+}
+#section_accueil_3 p {
+    font-size: 1.8rem;
+    text-align: justify;
+    margin: 0;
+}
+#section_accueil_3 span {
+    position: absolute;
+}
+#section_accueil_3 span:nth-child(2) {
+    top: 20rem;
+    left: 81%;
+    font-family: mathleteskinny;
+    font-size: 4rem;
+    color: white;
+    z-index: 3;
+    position: absolute
+}
+/* XXXXXXXXXXXXXXXXXXX SECTIION ACCUEIL 4 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#section_accueil_4 > div {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#section_accueil_4 figure {
+    top: 10rem;
+    position: absolute;
+    right: 7%;
+    width: 34%;
+    z-index: 5;
+}
+#section_accueil_4 figure::before{
+    content: url(../img/accueil/picto_10.svg);
+    top: 2rem;
+    right: 13%;
+    position: absolute;
+    z-index: 3;
+    width: 15%;
+}
+#section_accueil_4 figure::after{
+    content: url(../img/accueil/picto_11.svg);
+    bottom: -24rem;
+    right: 58%;
+    position: absolute;
+    z-index: 3;
+    width: 10%;
+}
+#section_accueil_4 > div div {
+    background: #FAD980;
+    position: absolute;
+    z-index: 2;
+    padding: 13rem 38.15%;
+    top: 21.5rem;
+    left: 0;
+}
+#section_accueil_4 > div div::before {
+    content: url(../img/accueil/picto_9.svg);
+    top: -8rem;
+    left: 18%;
+    position: absolute;
+    z-index: 3;
+    width: 9%;
+}
+#section_accueil_4 article {
+    position: absolute;
+    top: 31rem;
+    z-index: 3;
+    left: 11%;
+    border-left: solid 20px black;
+    padding-left: 2%;
+    width: 47%;
+}
+#section_accueil_4 article::before{
+    content: url(../img/quote_2.svg);
+    bottom: 0;
+    right: -11%;
+    position: absolute;
+    z-index: 3;
+    width: 6%;
+}
+#section_accueil_4 article::after{
+    content: url(../img/quote_1.svg);
+    top: 0;
+    left: -11%;
+    position: absolute;
+    z-index: 3;
+    width: 6%;
+}
+#section_accueil_4 h2 {
+    font-size: 5rem;
+    color: white;
+    font-weight: normal;
+    margin: 0;
+}
+#section_accueil_4 p {
+    font-size: 1.8rem;
+    text-align: justify;
+    margin: 0;
+}
+#section_accueil_4 span {
+    position: absolute;
+}
+#section_accueil_4 span:nth-child(2) {
+    top: 20rem;
+    left: 81%;
+    font-family: mathleteskinny;
+    font-size: 4rem;
+    color: white;
+    z-index: 3;
+    position: absolute
+}
 
 
 /**
@@ -356,4 +716,46 @@ figure{
      |  __| | |  | || |  | |  | |   |  __|  |  _  / 
      | |    | |__| || |__| |  | |   | |____ | | \ \ 
      |_|     \____/  \____/   |_|   |______||_|  \_\ **/
+
+footer{
+    background: #F0F0F0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 2rem 0;
+}
+footer p {
+    color: #727272;
+    font-family: mathleteskinny;
+    font-size: 2rem;
+    margin: 0;
+    position: relative;
+}
+footer p::before{
+    content: url(../img/ombre.png);
+    top: -2rem;
+    left: 3%;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.5;
+}
+
+
+
+
+
+@media screen and (max-device-width: 1300px){
+    main .maxWidht {
+    max-width: 100rem;
+    margin: 0 auto;
+    }
+    #banniere{
+        width: 89%;
+    }
+    #banniere::after{
+        left: -5%;
+    }
+}
+
+
      
