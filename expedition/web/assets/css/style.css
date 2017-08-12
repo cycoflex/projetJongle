@@ -428,7 +428,7 @@ figure{
     width: 2%;
 }
 #section_accueil_2 figure {
-    top: 11rem;
+    top: 20rem;
     position: absolute;
     left: 23%;
     width: 50%;
@@ -451,7 +451,11 @@ figure{
     width: 10%;
 }
 #section_accueil_2 > div div {
-    background: #FF4A4A;
+    background: #ff4a4a;
+        background: -moz-linear-gradient(left, #ff4a4a 0%, #f49c5d 100%);
+        background: -webkit-linear-gradient(left, #ff4a4a 0%,#f49c5d 100%);
+        background: linear-gradient(to right, #ff4a4a 0%,#f49c5d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4a4a', endColorstr='#f49c5d',GradientType=1 );
     position: absolute;
     z-index: 2;
     padding: 14rem 24.15%;
@@ -475,7 +479,7 @@ figure{
 }
 #section_accueil_2 article {
     position: absolute;
-    top: 46rem;
+    top: 60rem;
     z-index: 3;
     left: 20%;
     border-left: solid 20px black;
@@ -537,7 +541,7 @@ figure{
     width: 2%;
 }
 #section_accueil_3 figure {
-    top: 7rem;
+    top: 16rem;
     position: absolute;
     left: 3%;
     width: 30%;
@@ -560,7 +564,11 @@ figure{
     width: 18%;
 }
 #section_accueil_3 > div div {
-    background: #A9E3C2;
+background: #c2fcc8;
+background: -moz-linear-gradient(left, #c2fcc8 0%, #4adbc5 100%);
+background: -webkit-linear-gradient(left, #c2fcc8 0%,#4adbc5 100%);
+background: linear-gradient(to right, #c2fcc8 0%,#4adbc5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2fcc8', endColorstr='#4adbc5',GradientType=1 );
     position: absolute;
     z-index: 2;
     padding: 13rem 39.15%;
@@ -585,7 +593,7 @@ figure{
 }
 #section_accueil_3 article {
     position: absolute;
-    top: 30rem;
+    top: 21rem;
     z-index: 3;
     left: 38%;
     border-left: solid 20px black;
@@ -639,7 +647,7 @@ figure{
     position: relative;
 }
 #section_accueil_4 figure {
-    top: 10rem;
+    top: 19rem;
     position: absolute;
     right: 7%;
     width: 34%;
@@ -662,7 +670,11 @@ figure{
     width: 10%;
 }
 #section_accueil_4 > div div {
-    background: #FAD980;
+    background: #f99d09;
+        background: -moz-linear-gradient(left, #f99d09 0%, #f99d09 0%, #fad980 97%);
+        background: -webkit-linear-gradient(left, #f99d09 0%,#f99d09 0%,#fad980 97%);
+        background: linear-gradient(to right, #f99d09 0%,#f99d09 0%,#fad980 97%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f99d09', endColorstr='#fad980',GradientType=1 );
     position: absolute;
     z-index: 2;
     padding: 13rem 38.15%;
@@ -679,7 +691,7 @@ figure{
 }
 #section_accueil_4 article {
     position: absolute;
-    top: 31rem;
+    top: 22rem;
     z-index: 3;
     left: 11%;
     border-left: solid 20px black;
