@@ -116,6 +116,23 @@ form button{
 p{
     font-family: GeosansLight;
 }
+#logo {
+    display: none;
+    position: relative;
+}
+#div-magique{
+    position: relative;
+    display: none;
+    z-index: 1;
+}
+#div-magique::after {
+    content: url(../img/header/fleche_nav.svg);
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    top: 0.15rem;
+}
 
  /**
       _    _  ______            _____   ______  _____  
@@ -130,6 +147,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    background: white;
 }
 header nav figure {
     width: 12%;

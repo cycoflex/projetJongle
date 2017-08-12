@@ -33,15 +33,15 @@ class Front extends RouteParent{
 	}
 
 	function contact(){		
-		return $this->construireHtml(["header_min", "section-contact", "footer"]);		
+		return $this->construireHtml(["header", "section-contact", "footer"]);		
 	}
 
 	function presentation(){		
-		return $this->construireHtml(["header_min", "section-presentation", "footer"]);
+		return $this->construireHtml(["header", "section-presentation", "footer"]);
 	}
 
 	function pedagogie(){		
-		return $this->construireHtml(["header_min", "section-pedagogie", "footer"]);
+		return $this->construireHtml(["header", "section-pedagogie", "footer"]);
 	}
 
 /*
@@ -53,19 +53,19 @@ class Front extends RouteParent{
 */
 	function blog($numPage = 1){	
 		$this->infosDetail["numPage"] = $numPage;
-		return $this->construireHtml(["header_min", "section-blog", "footer"]);
+		return $this->construireHtml(["header", "section-blog", "footer"]);
 	}
 
 	function article($id){		
 		$this->infosDetail["id"] = $id;			
-		return $this->construireHtml(["header_min", "section-article", "footer"]);
+		return $this->construireHtml(["header", "section-article", "footer"]);
 	}
 
 	//
 	//	Photos publiques
 	//
 	function galerie(){		
-		return $this->construireHtml(["header_min", "section-galerie", "footer"]);
+		return $this->construireHtml(["header", "section-galerie", "footer"]);
 	}
 
 /*
@@ -76,7 +76,7 @@ class Front extends RouteParent{
 *******************************************************************************
 */
 	function inscription(){		
-		return $this->construireHtml(["header_min", "section-inscription", "footer"]);
+		return $this->construireHtml(["header", "section-inscription", "footer"]);
 	}
 
 /*
@@ -86,7 +86,7 @@ class Front extends RouteParent{
 */
 	function connexion(){
 		if ($this->urlRedirection == "")
-			return $this->construireHtml(["header_min", "section-connexion", "footer"]);	
+			return $this->construireHtml(["header", "section-connexion", "footer"]);	
 		else{
 			global $app;
             return $app->redirect($this->urlRedirection);
