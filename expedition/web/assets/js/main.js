@@ -24,6 +24,22 @@ function afficherCacherElement(ClickButton, element1,element2){
 	})
 	return ;
 }
+var $window = $(window);
+
+$window.scroll(function () {
+    if ($window.scrollTop() > 200){
+       $( "#figure-1" ).animate({ "top": "11rem" }, 3500 )
+       $( "#article-1" ).animate({ "top": "42rem" }, 3500 )
+    }
+    if ($window.scrollTop() > 900){
+       $( "#figure-2" ).animate({ "top": "7rem" }, 3500 )
+       $( "#article-2" ).animate({ "top": "30rem" }, 3500 )
+    }
+    if ($window.scrollTop() > 1600){
+       $( "#figure-3" ).animate({ "top": "10rem" }, 3000 )
+       $( "#article-3" ).animate({ "top": "31rem" }, 3000 )
+    }
+});
 
 // APPELS FONCTIONS
 
