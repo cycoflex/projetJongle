@@ -403,7 +403,7 @@ figure{
 }
 #section_accueil_2 > div::after{
     content: url(../img/header/arrow.svg);
-    bottom: 7rem;
+    bottom: 0;
     right: 5%;
     position: absolute;
     z-index: 2;
@@ -503,7 +503,116 @@ figure{
     z-index: 3;
     position: absolute;
 }
+/* XXXXXXXXXXXXXXXXXXX SECTIION ACCUEIL 3 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
+#section_accueil_3 > div {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#section_accueil_3 > div::after{
+    content: url(../img/header/arrow.svg);
+    bottom: 0;
+    right: 5%;
+    position: absolute;
+    z-index: 2;
+    width: 2%;
+}
+#section_accueil_3 figure {
+    top: 7rem;
+    position: absolute;
+    left: 3%;
+    width: 30%;
+    z-index: 5;
+}
+#section_accueil_3 figure::before{
+    content: url(../img/accueil/picto_5.svg);
+    top: -3rem;
+    left: 41%;
+    position: absolute;
+    z-index: 3;
+    width: 25%;
+}
+#section_accueil_3 figure::after{
+    content: url(../img/accueil/picto_6.svg);
+    bottom: 1rem;
+    left: 34%;
+    position: absolute;
+    z-index: 3;
+    width: 18%;
+}
+#section_accueil_3 > div div {
+    background: #A9E3C2;
+    position: absolute;
+    z-index: 2;
+    padding: 13rem 39.15%;
+    top: 17.5rem;
+    right: 0;
+}
+#section_accueil_3 > div div::before {
+    content: url(../img/accueil/picto_13.svg);
+    top: -5rem;
+    right: 28%;
+    position: absolute;
+    z-index: 3;
+    width: 7%;
+}
+#section_accueil_3 > div div::after {
+    content: url(../img/accueil/picto_8.svg);
+    bottom: -16rem;
+    right: 44%;
+    position: absolute;
+    z-index: 3;
+    width: 5%;
+}
+#section_accueil_3 article {
+    position: absolute;
+    top: 30rem;
+    z-index: 3;
+    left: 38%;
+    border-left: solid 20px black;
+    padding-left: 2%;
+    width: 45%;
+}
+#section_accueil_3 article::before{
+    content: url(../img/quote_2.svg);
+    bottom: 0;
+    right: -11%;
+    position: absolute;
+    z-index: 3;
+    width: 6%;
+}
+#section_accueil_3 article::after{
+    content: url(../img/quote_1.svg);
+    top: 0;
+    left: -11%;
+    position: absolute;
+    z-index: 3;
+    width: 6%;
+}
+#section_accueil_3 h2 {
+    font-size: 5rem;
+    color: white;
+    font-weight: normal;
+    margin: 0;
+}
+#section_accueil_3 p {
+    font-size: 1.8rem;
+    text-align: justify;
+    margin: 0;
+}
+#section_accueil_3 span {
+    position: absolute;
+}
+#section_accueil_3 span:nth-child(2) {
+    top: 20rem;
+    left: 81%;
+    font-family: mathleteskinny;
+    font-size: 4rem;
+    color: white;
+    z-index: 3;
+    position: absolute
+}
 
 
 
