@@ -14,8 +14,12 @@
 	<header>
 		<nav class="contain">
 			<span id="btn-menu"> menu</span>
+			<figure id="logo">
+					<img src="<?php echo $urlRoot; ?>/assets/img/header/logo_miniature.svg">
+			</figure>
 			<span id="btn-connexion" >connexion</span>
 		</nav>
+		<div id="div-magique"></div>
 <!-- début menu -->
 		<div id="menu">
 			<span id="btn-close">fermer menu</span>

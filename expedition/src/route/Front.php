@@ -26,32 +26,35 @@ class Front extends RouteParent{
 *******************************************************************************
 *******************************************************************************
 */
-<<<<<<< HEAD
+
 	function accueil(){			
-		return $this->construireHtml(["header", "section-accueil", "footer"]);
-=======
+		return $this->construireHtml(["header_min", "section-accueil", "footer"]);
+
 	function accueil(){	
 		//	traitement du formulaire
 
-		return $this->construireHtml(["header", "section-accueil", "section-accueil_2", "section-accueil_3", "section-accueil_4", "footer"]);
->>>>>>> b22cc4228a7d3af9c1c688b43e926489c3e79a1f
+		return $this->construireHtml(["header_min", "section-accueil", "section-accueil_2", "section-accueil_3", "section-accueil_4", "footer"]);
 	}
 
 	function contact(){		
-		return $this->construireHtml(["header_min", "section-contact", "footer"]);		
+		return $this->construireHtml(["header", "section-contact", "footer"]);		
 	}
 
 	function presentation(){		
-		return $this->construireHtml(["header_min", "section-presentation", "footer"]);
+		return $this->construireHtml(["header", "section-presentation", "footer"]);
 	}
 
 <<<<<<< HEAD
 	function pedagogie(){				
-		return $this->construireHtml(["header", "section-pedagogie", "footer"]);
+		return $this->construireHtml(["header_min", "section-pedagogie", "footer"]);
 =======
 	function pedagogie(){		
+<<<<<<< HEAD
 		return $this->construireHtml(["header_min", "section-pedagogie", "footer"]);
 >>>>>>> b22cc4228a7d3af9c1c688b43e926489c3e79a1f
+=======
+		return $this->construireHtml(["header", "section-pedagogie", "footer"]);
+>>>>>>> 3995efb4bec06acdfb9a7a516dfa180eb141eb65
 	}
 
 /*
@@ -63,7 +66,7 @@ class Front extends RouteParent{
 */
 	function blog($numPage = 1){	
 		$this->infosDetail["numPage"] = $numPage;
-		return $this->construireHtml(["header_min", "section-blog", "footer"]);
+		return $this->construireHtml(["header", "section-blog", "footer"]);
 	}
 
 	function article($id){		

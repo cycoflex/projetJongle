@@ -11,6 +11,22 @@
 
 <!-- js initilaize massonry -->
 <script type="text/javascript" src="<?php echo $urlRoot; ?>/assets/js/massonry.js"></script>
+<script type="text/javascript" language="javascript">
+         $(function () {
+             var $window = $(window);
+             $window.scroll(function () {
+                 if ($window.scrollTop() != 0){
+                     $('#logo').fadeIn(1000);
+                     $('#div-magique').fadeIn(1000);
 
+                 }
+                 else if($window.scrollTop() == 0){
+                 	$('#logo').hide();
+                 	$('#div-magique').hide();
+                 }
+             });
+         });
+    </script>  
+</script>
 </body>
 </html>
