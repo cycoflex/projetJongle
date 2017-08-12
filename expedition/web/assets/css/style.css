@@ -467,18 +467,18 @@ figure{
 #section_accueil_2 article::before{
     content: url(../img/quote_2.svg);
     bottom: 0;
-    right: -11%;
+    right: -9%;
     position: absolute;
     z-index: 3;
-    width: 6%;
+    width: 5%;
 }
 #section_accueil_2 article::after{
     content: url(../img/quote_1.svg);
     top: 0;
-    left: -11%;
+    left: -9%;
     position: absolute;
     z-index: 3;
-    width: 6%;
+    width: 5%;
 }
 #section_accueil_2 h2 {
     font-size: 5rem;
@@ -613,7 +613,100 @@ figure{
     z-index: 3;
     position: absolute
 }
+/* XXXXXXXXXXXXXXXXXXX SECTIION ACCUEIL 4 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
+#section_accueil_4 > div {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#section_accueil_4 figure {
+    top: 10rem;
+    position: absolute;
+    right: 7%;
+    width: 34%;
+    z-index: 5;
+}
+#section_accueil_4 figure::before{
+    content: url(../img/accueil/picto_10.svg);
+    top: 2rem;
+    right: 13%;
+    position: absolute;
+    z-index: 3;
+    width: 15%;
+}
+#section_accueil_4 figure::after{
+    content: url(../img/accueil/picto_11.svg);
+    bottom: -24rem;
+    right: 58%;
+    position: absolute;
+    z-index: 3;
+    width: 10%;
+}
+#section_accueil_4 > div div {
+    background: #FAD980;
+    position: absolute;
+    z-index: 2;
+    padding: 13rem 38.15%;
+    top: 21.5rem;
+    left: 0;
+}
+#section_accueil_4 > div div::before {
+    content: url(../img/accueil/picto_9.svg);
+    top: -8rem;
+    left: 18%;
+    position: absolute;
+    z-index: 3;
+    width: 9%;
+}
+#section_accueil_4 article {
+    position: absolute;
+    top: 31rem;
+    z-index: 3;
+    left: 11%;
+    border-left: solid 20px black;
+    padding-left: 2%;
+    width: 47%;
+}
+#section_accueil_4 article::before{
+    content: url(../img/quote_2.svg);
+    bottom: 0;
+    right: -11%;
+    position: absolute;
+    z-index: 3;
+    width: 6%;
+}
+#section_accueil_4 article::after{
+    content: url(../img/quote_1.svg);
+    top: 0;
+    left: -11%;
+    position: absolute;
+    z-index: 3;
+    width: 6%;
+}
+#section_accueil_4 h2 {
+    font-size: 5rem;
+    color: white;
+    font-weight: normal;
+    margin: 0;
+}
+#section_accueil_4 p {
+    font-size: 1.8rem;
+    text-align: justify;
+    margin: 0;
+}
+#section_accueil_4 span {
+    position: absolute;
+}
+#section_accueil_4 span:nth-child(2) {
+    top: 20rem;
+    left: 81%;
+    font-family: mathleteskinny;
+    font-size: 4rem;
+    color: white;
+    z-index: 3;
+    position: absolute
+}
 
 
 /**
@@ -624,8 +717,28 @@ figure{
      | |    | |__| || |__| |  | |   | |____ | | \ \ 
      |_|     \____/  \____/   |_|   |______||_|  \_\ **/
 
-
-
+footer{
+    background: #F0F0F0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 2rem 0;
+}
+footer p {
+    color: #727272;
+    font-family: mathleteskinny;
+    font-size: 2rem;
+    margin: 0;
+    position: relative;
+}
+footer p::before{
+    content: url(../img/ombre.png);
+    top: -2rem;
+    left: 3%;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.5;
+}
 
 
 
