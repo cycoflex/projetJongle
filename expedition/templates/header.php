@@ -10,14 +10,13 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $urlRoot; ?>/assets/css/style.css">
 </head>
 <body>
-	<div id="accueil">
-	<!-- début header -->
-		<header>
-			<nav class="contain">
-				<span id="btn-menu"> menu</span>
-				<span id="btn-connexion" >connexion</span>
-			</nav>
-			<!-- début menu -->
+<!-- début header -->
+	<header>
+		<nav class="contain">
+			<span id="btn-menu"> menu</span>
+			<span id="btn-connexion" >connexion</span>
+		</nav>
+<!-- début menu -->
 		<div id="menu">
 			<span id="btn-close">fermer menu</span>
 			<ul class="contain-col">
@@ -70,10 +69,10 @@
 				</div>
 		</div>				
 		</header>
-		<figure id="logo-accueil">
-			<img src="<?php echo $urlRoot; ?>/assets/img/accueil/logo-accueil.svg">
-		</figure>
-		<h1>l'expédition</h1>
+	
+	
+		
+		
 	
 	</div>
 	<main>

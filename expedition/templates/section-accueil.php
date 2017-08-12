@@ -1,13 +1,9 @@
 <section id="section_accueil_1">
-	<div>
-		<figure>
-			<img src="<?php echo $urlRoot; ?>/assets/img/accueil/image_accueil_1.png">
+	<div id="accueil">
+		<figure id="logo-accueil">
+			<img src="<?php echo $urlRoot; ?>/assets/img/accueil/logo-accueil.svg">
 		</figure>
-		<div></div>
-		<article>
-			<h2>titre</h2>
-			<p>texte</p>
-		</article>
+		<h1>l'expédition</h1>
 	</div>
 </section>
 
