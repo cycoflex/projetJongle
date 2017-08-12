@@ -401,6 +401,14 @@ figure{
     height: 100vh;
     position: relative;
 }
+#section_accueil_2 > div::after{
+    content: url(../img/header/arrow.svg);
+    bottom: 7rem;
+    right: 5%;
+    position: absolute;
+    z-index: 2;
+    width: 2%;
+}
 #section_accueil_2 figure {
     top: 11rem;
     position: absolute;
@@ -408,12 +416,44 @@ figure{
     width: 50%;
     z-index: 5;
 }
+#section_accueil_2 figure::before{
+    content: url(../img/accueil/picto_1.svg);
+    top: -1rem;
+    left: 14%;
+    position: absolute;
+    z-index: 3;
+    width: 10%;
+}
+#section_accueil_2 figure::after{
+    content: url(../img/accueil/picto_6.svg);
+    bottom: -1rem;
+    right: -26%;
+    position: absolute;
+    z-index: 3;
+    width: 10%;
+}
 #section_accueil_2 > div div {
     background: #FF4A4A;
     position: absolute;
     z-index: 2;
     padding: 14rem 24.15%;
     top: 26rem;
+}
+#section_accueil_2 > div div::before {
+    content: url(../img/accueil/picto_12.svg);
+    top: -9rem;
+    left: 19%;
+    position: absolute;
+    z-index: 3;
+    width: 10%;
+}
+#section_accueil_2 > div div::after {
+    content: url(../img/accueil/picto_0.svg);
+    bottom: -8rem;
+    left: 19%;
+    position: absolute;
+    z-index: 3;
+    width: 10%;
 }
 #section_accueil_2 article {
     position: absolute;
@@ -450,6 +490,18 @@ figure{
     font-size: 1.8rem;
     text-align: justify;
     margin: 0;
+}
+#section_accueil_2 span {
+    position: absolute;
+}
+#section_accueil_2 span:nth-child(2) {
+    top: 27rem;
+    left: 6%;
+    font-family: mathleteskinny;
+    font-size: 4rem;
+    color: white;
+    z-index: 3;
+    position: absolute;
 }
 
 
